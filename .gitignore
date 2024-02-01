@@ -9,3 +9,6 @@ db.sqlite3
 /venv
 *.env
 .vscode
+\.ve
+
+/env
