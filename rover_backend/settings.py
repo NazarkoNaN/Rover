@@ -42,6 +42,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
+    'knox',
 ]
 
 PROJECT_APPS = [
@@ -141,3 +142,12 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'rest_framework. authentication.BasicAuthentication',
+        # 'rest_framework. authentication.SessionAuthentication',
+        'knox.auth.TokenAuthentication',
+    ]
+}
